@@ -23,7 +23,7 @@ This project contains a Python implementation of a Genetic Algorithm (GA) design
 
 1. Clone the repository:
    ```
-   git clone https://your-repository-url
+   git clone https://github.com/jakub1090cn/Knapsack-Problem/tree/main
    ```
 2. Navigate to the project directory:
    ```
@@ -31,7 +31,8 @@ This project contains a Python implementation of a Genetic Algorithm (GA) design
    ```
 3. Install the required packages:
    ```
-   pip install -r requirements.txt
+   pip install -r python
+   pip install -r numpy
    ```
 
 ### Usage
