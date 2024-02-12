@@ -31,7 +31,6 @@ This project contains a Python implementation of a Genetic Algorithm (GA) design
    ```
 3. Install the required packages:
    ```
-   pip install -r python
    pip install -r numpy
    ```
 
