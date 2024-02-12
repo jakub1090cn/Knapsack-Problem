@@ -257,9 +257,10 @@ class TournamentSelection:
 
 
 class GeneticAlgorithm:
-    def __init__(self, population_size, max_generations, elitism_size=16, max_iterations_without_improvement=10):
+    def __init__(self, population_size, max_generations, elitism_size=16, max_iterations_without_improvement=10, mutation_rate=0.1):
         self.max_generations = max_generations
         self.population_size = population_size
+        self.mutation_rate = mutation_rate
         self.elitism_size = int(elitism_size * population_size)
         self.population = VectorPopulation(population_size=population_size)
         self.selection = TournamentSelection()
@@ -305,7 +306,7 @@ class GeneticAlgorithm:
                 parent1 = self.selection.select(self.population, fits)
                 parent2 = self.selection.select(self.population, fits)
                 child = parent1.sp_crossover(parent2)
-                child.mutate(0.1)
+                child.mutate(self.mutation_rate)
                 new_population.add_vector(child)
 
             current_best = new_population.get_best()
